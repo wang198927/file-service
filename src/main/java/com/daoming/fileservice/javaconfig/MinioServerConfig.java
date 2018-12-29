@@ -17,6 +17,7 @@ public class MinioServerConfig {
     private String accessKey;
     private String secretKey;
 
+
     public String getEndpoint() {
         return endpoint;
     }
@@ -48,5 +49,4 @@ public class MinioServerConfig {
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
     }
-
 }

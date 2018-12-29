@@ -3,6 +3,6 @@ import java.io.InputStream;
 import java.util.List;
 
 public interface IFileOperateService {
-    public void uploadFile(String objectName, byte[] stream);
-    public byte[] downloadFile(String objectName);
+    public void uploadFile(String bucketName, String filePath, byte[] stream);
+    public byte[] downloadFile(String bucketName, String filePath);
 }

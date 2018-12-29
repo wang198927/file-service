@@ -15,10 +15,6 @@ public class FileOperateServiceTest {
     @Autowired
     private FileOperateService fileOperateService;
 
-    @Test
-    public void createRootDir() {
-        fileOperateService.createRootDir("javatest3");
-    }
 
     @Test
     public void uploadFile() {
