@@ -1,4 +1,4 @@
-package com.daoming.fileservice.core.service.impl;
+package com.daoming.fileservice.rabbitmq.Sender;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,23 +6,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
+
+import static org.junit.Assert.*;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = com.daoming.fileservice.config.ApplicationConfig.class)
-public class FileOperateServiceTest {
+public class SenderTest {
 
     @Autowired
-    private FileOperateService fileOperateService;
-
-
-    @Test
-    public void uploadFile() {
-    }
+    Sender sender;
 
     @Test
-    public void downloadFile() {
-    }
-
-    @Test
-    public void listFolderContent() {
+    public void send() throws Exception{
+        while(true){
+            String msg = new Date().toString();
+            sender.send(msg);
+            Thread.sleep(1000);
+        }
     }
 }

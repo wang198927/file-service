@@ -37,7 +37,7 @@ public class BucketOperateService implements IBucketOperateService {
 
     @Override
     public boolean createBucket(String bucketName) {
-        if (null == bucketName || "" == bucketName) return false;
+        if (null == bucketName || 0 == bucketName.length()) return false;
         try {
             // 如存储桶不存在，创建之。
             boolean found = minioClient.bucketExists(bucketName);
@@ -56,7 +56,7 @@ public class BucketOperateService implements IBucketOperateService {
 
     @Override
     public boolean removeBucket(String bucketName) {
-        if (null == bucketName || "" == bucketName) return false;
+        if (null == bucketName || 0 == bucketName.length()) return false;
         try {
             // 如存储桶不存在，不执行。
             boolean found = minioClient.bucketExists(bucketName);

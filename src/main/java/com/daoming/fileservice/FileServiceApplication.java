@@ -1,6 +1,6 @@
 package com.daoming.fileservice;
 
-import com.daoming.fileservice.javaconfig.MinioServerConfig;
+import com.daoming.fileservice.config.MinioServerConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
